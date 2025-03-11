@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deepseek
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deepseek
+  template:
+    metadata:
+      labels:
+        app: deepseek
+    spec:
+      containers:
+      - name: deepseek
+        image: deepseek-ai/deepseek:v1.0  # Use the latest DeepSeek image
+        resources:
+          limits:
+            nvidia.com/gpu: 1  # Request 1 GPU
+        ports:
+        - containerPort: 8080
+      restartPolicy: Always

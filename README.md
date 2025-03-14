@@ -1,6 +1,6 @@
 # DC-AI
 
-Kubernetes configuration for the DeepSeek AI cluster 
+Kubernetes configuration for the DeepSeek AI cluster and install scripts
 
 
 ## Deploy DeepSeek as a Kubernetes Pod

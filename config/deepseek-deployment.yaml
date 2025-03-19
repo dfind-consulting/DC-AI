@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deepseek
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deepseek
+  template:
+    metadata:
+      labels:
+        app: deepseek
+    spec:
+      containers:
+        - name: deepseek
+          image: deepseek:latest
+          ports:
+            - containerPort: 8080
